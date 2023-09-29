@@ -168,16 +168,17 @@ export default function App() {
         },
     };
 
-    useEffect(() => {
-        axios.get("https://ipapi.co/json")
-            .then((response) => {
-                console.log(response);
-                setPlace(response.data.city)
-                weather.fetchWeather(response.data.city);
-            })
-            .catch((error) => console.log(error));
+    // useEffect(() => {
+    //     axios.get("https://ipapi.co/json")
+    //         .then((response) => {
+    //             console.log(response);
+    //             setPlace(response.data.city)
+    //             weather.fetchWeather(response.data.city);
+    //         })
+    //         .catch((error) => console.log(error));
+    //         console.log(process.env.REACT_APP_API_KEY)
 
-    })
+    // })
 
     //-------------------------------- Translate --------------------------------
 

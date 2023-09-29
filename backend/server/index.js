@@ -20,13 +20,11 @@ connectDB();
 app.use(bodyparser.json({ limit: "150mb", extended: true }))
 app.use(bodyparser.urlencoded({ limit: "150mb", extended: true, parameterLimit: 50000 }))
 
-// cors
-const corsOptions = {
-    origin: process.env.FRONTEND_URL,
+
+app.use("*",cors({
+    origin: true,
     credentials: true,
-    optionSuccessStatus: 200
-}
-app.use(cors(corsOptions));
+}));
 
 app.use(cookieParser());
 app.use(session({
