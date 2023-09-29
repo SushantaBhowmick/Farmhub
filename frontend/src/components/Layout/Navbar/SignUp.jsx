@@ -148,10 +148,6 @@ export default function SignUp({ setTrigger, openSnackbar }) {
             })
             .catch((error) => console.log(error));
     }
-    useEffect(()=>{
-        console.log(process.env.REACT_APP_BACKEND_URL)
-    })
-
     const navigate = useNavigate();
 
     async function loginUser() {
